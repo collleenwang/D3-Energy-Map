@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+      svg { 
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 { margin-bottom: 2rem; }
+
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      h3 { 
+        margin-top: 3rem; 
+        margin-bottom: 1rem;
+      }
+
+      .container {
+        max-width: 66rem;
+      }
+
+      img.block {
+        display: block;
+        border: solid #333 1p;
+        margin: 0 auto;
+      }
+
+      .sphere {
+        fill: none;
+        stroke: #000;
+        stroke-width: 3px;
+      }
+
+/*      .fill {
+        fill: #fff;
+      }
+*/
+      .graticule {
+        fill: none;
+        stroke: #777;
+        stroke-width: .5px;
+        stroke-opacity: .5;
+      }
+
+      h3 small {
+        background: #fff880;
+      }
+
+      #chart-6 svg {
+        display: inline;
+      }
+
+    </style>
+  </head>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>H A V I N G * F U N</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+
+      <h3>Chart 1: A bubble map, kind of!</h3>
+      <p>We made a map of all of the powerplants in the United States, copying <a href='https://www.washingtonpost.com/graphics/national/power-plants'>this</a>. But what if we were sick of the map?</p>
+      <ul>
+        <li>Max Total MW (all plants): 500000 by source, 7500 individual</li>
+        <li>Max Total MW (first 100): 81000 by source, 3600 individual</li>
+      </ul>
+      <div id="powerplants">
+        <button id="draw-map">Draw a map</button>
+        <button id="draw-bars-1">Draw bars 1</button>
+        <button id="draw-bars-2">Draw bars 2</button>
+        <button id="draw-scatter">Scatter</button>
+      </div>
+
+      <h3>Chart 2: Dragging</h3>
+      <p>An quick intro to <code>d3.drag()</code></p>
+  
+      <div id="drag">
+      </div>
+
+      <h3>Chart 3: You Draw It</h3>
+      <p>More or less lifted from <a href="https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html">here</a>.</p>
+  
+      <div id="you-draw-it">
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+
+  <script src="01-powerplants.js"></script>
+  <script src="02-drag.js"></script>
+  <script src="03-you-draw-it.js"></script>
+</div>
+</body>
+</html>
